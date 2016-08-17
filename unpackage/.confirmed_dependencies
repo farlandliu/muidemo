@@ -1,0 +1,34 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"html/home.html"
+		],
+		"refer": [
+			"html/setting.html",
+			"html/message.html",
+			"html/home.html"
+		]
+	},
+	"html/home.html": {
+		"resources": [
+			"js/mui.min.js",
+			"js/mui.lazyload.js",
+			"js/mui.lazyload.img.js",
+			"images/cbd.jpg",
+			"css/app.css"
+		],
+		"refer": [
+			"html/music.html"
+		]
+	},
+	"html/music.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/app.css",
+			"css/mui.min.css"
+		]
+	}
+}
