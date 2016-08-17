@@ -12,7 +12,9 @@
 	</head>
 
 	<body>
+		
 		<div class="mui-content">
+			<h3Audio></h3>
 			<ul id="list" class="mui-table-view mui-table-view-chevron">
 				<li class="mui-table-view-cell mui-media ">
 					<a class="mui-navigate-right">
@@ -58,7 +60,7 @@
                     li = document.createElement('li');
                     li.className = 'mui-table-view-cell mui-media';
                     li.innerHTML = '<a class="mui-navigate-right" id='+ id +' data-audio='+ audio +'>'+
-                                        '<img class="station-list mui-pull-left" data-lazyload="'+picUrl+'" style="width:120px;">'+
+                                        '<img class="station-list mui-pull-left" src="'+picUrl+'" style="width:120px;">'+
                                         '<div class="mui-media-body">'+name+
                                             '<p class="mui-ellipsis">'+author+'</p>'+
                                         '</div>'+
@@ -67,10 +69,7 @@
                 })
                 
                 list.appendChild(fragment)
-                
-                mui(document).imageLazyload({
-                    placeholder: '../img/60x60.gif'
-                });
+               
             },
 			error: function(xhr, type, errorThrown) {
 				//异常处理；

@@ -20,9 +20,7 @@
 		"Accelerometer": {
             "description": "访问加速度感应器"
         },
-        "Audio": {
-            "description": "访问麦克风"
-        },
+        "Audio": {},
         "Cache": {
             "description": "管理应用缓存"
         },
@@ -187,7 +185,7 @@
 					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
 					"xxhdpi": ""
 				}
-			}
+			},"debug":true
 		}
 	},
 	"dependencies": {
@@ -211,7 +209,9 @@
 					"js/mui.lazyload.js",
 					"js/mui.lazyload.img.js",
 					"images/cbd.jpg",
-					"css/app.css"
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [
 					"html/music.html"
@@ -226,6 +226,21 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"html/message.html": {
+				"resources": [
+					"images/icon_play.png",
+					"js/soundmanager2.js",
+					"css/inlineplayer.css",
+					"js/inlineplayer.js",
+					"images/icon_pause.png",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"mp3/1.mp3"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -234,5 +249,9 @@
 				"css/mui.css"
 			]
 		}
-	}
+	},
+	"unpackage":[
+	  "css/mui.css",
+	  "js/mui.js"
+	]
 }

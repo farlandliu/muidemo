@@ -3,10 +3,49 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/app.css">
+		<link rel="stylesheet" type="text/css" href="../css/inlineplayer.css">
 	</head>
 	<body>
 		<div class="mui-content">
 		    <h2>Message</h2>
+		    
+		    <ul class="graphic">
+
+  <li><a href="../mp3/1.mp3">Rain</a></li>
+  <li><a href="../mp3/2.mp3">Walking</a></li>
+  <li><a href="../mp3/2.mp3">Walking</a></li>
+  <li><a href="../mp3/2.mp3">Walking</a></li>
+  
+ </ul>
+ 
+ <input type="button" value="Start Play" onclick="startPlay();"/> 
+		<br/>
+		<input type="button" value="Stop Play" onclick="stopPlay();"/>
+		
 		</div>
 	</body>
+	
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/soundmanager2.js"></script>
+	<script src="../js/inlineplayer.js"></script>
+	<script>
+		var p = null; 
+function startPlay() {
+	if ( plus.audio == undefined ) {
+		alert( "Device not ready!" );
+	}
+	p = plus.audio.createPlayer( "../mp3/1.mp3" );
+	p.play( function () {
+		alert( "Audio play success!" ); 
+	}, function ( e ) {
+		alert( "Audio play error: " + e.message ); 
+	} ); 
+}
+function stopPlay() {
+	p.stop();
+}
+
+	</script>
 </html>
